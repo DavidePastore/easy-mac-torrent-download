@@ -20,7 +20,7 @@ $(function() {
     function loadPassword(passwordUrl) {
         console.log('URL from which retrieving the password:', passwordUrl);
 
-        $.get( CORS_ANYWHERE + passwordUrl, function(data) {
+        $.get( CORS_PROXY + passwordUrl, function(data) {
             // Find the first password URL
             let matches = FIRST_STEP_REGEX.exec(data);
             if (!matches || matches.length < 2) {
@@ -31,7 +31,7 @@ $(function() {
             console.log('First found URL', newUrl);
 
             // Access to the new URL
-            $.get( CORS_ANYWHERE + newUrl, function(data) {
+            $.get( CORS_PROXY + newUrl, function(data) {
                 // Find the password here
                 let matches = SECOND_STEP_REGEX.exec(data);
 
