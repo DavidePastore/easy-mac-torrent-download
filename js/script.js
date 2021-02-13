@@ -1,4 +1,4 @@
-const CORS_PROXY = 'https://thingproxy.freeboard.io/fetch/';
+const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
 const ENDPOINT = 'https://mac-torrent-download.net/';
 
 function showLoaderForSearchButton() {
