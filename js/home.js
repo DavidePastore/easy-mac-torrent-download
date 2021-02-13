@@ -24,7 +24,7 @@ $(function() {
             .attr('disabled', true)
             .html(LOADING_SPINNER);
 
-        $.get( CORS_ANYWHERE + href, function(data){
+        $.get( CORS_PROXY + href, function(data){
             let $data = $(data);
             let $th = $data.find("#postcontent > div.mv_box > div.mv_box_in > table > tbody > tr > th:contains('Hash')");
             let hash = $th.next().text();
@@ -45,7 +45,7 @@ $(function() {
         }
 
         // Search for torrents in the given page
-        $.get( CORS_ANYWHERE + url, function(data){
+        $.get( CORS_PROXY + url, function(data){
             // console.log('Response:', data);
             let $data = $(data);
             let elements = $data.find('.kanren.kanren-itiran dl');
